@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+             <h1 class="heading"><i class="fa-regular fa-circle-check"></i>TODO LIST</h1>
+             <P>Organized your tasks and get things done</P>
+        </div>
+    </header>
+<section class="one">
+    <form class="input">
+         <input type="text" class="txt" name="txt" placeholder="Add new task" required>
+         <button type="submit" class="btn">
+            <i class="fa-solid fa-plus"></i> Add
+         </button>            
+    </form>
+</section>
+    <!-- <section class="one">
+        <div class="input">
+             <input type="text" class="txt" name="txt" placeholder="Add new task">
+             <button class="btn"><i class="fa-solid fa-plus"></i> Add</button>            
+        </div>
+    </section> -->
+
+    <section class="two">
+        <input type="search" class="search" id="search" p placeholder="Search Task">
+    </section>
+
+          <p class="para">0 Active || 0 Completed</p>
+    
+    <section class="three">
+        <ul>
+            <li> <input type="checkbox" class="chk" id="chk">
+                 <p id="para2">item 01</p>
+                 <div class="icons">
+                    <i class="fa-regular logo fa-pen-to-square"></i>
+                    <i class="fa-regular logo fa-trash-can"></i>
+                 </div>
+                </li>
+        </ul>
+    </section>
+</body>
+<script src="/app.js"></script>
+</html>
