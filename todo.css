@@ -89,6 +89,7 @@ header p{
     font-size: 15px;
 }
 .para{
+    /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     margin: 0.5em 0;
@@ -106,7 +107,7 @@ header p{
 }
 .three ul{
     /* border: 2px solid blueviolet; */
-    padding: 0.5em;
+    /* padding: 0.5em; */
     width: 50%;
 }
 .three ul li{
@@ -145,7 +146,16 @@ header p{
     margin-right: 0.4em;
 }
 
+ul li:first-child{
+    display: none;
+}
 
+ul{
+    /* border: 1px solid red; */
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 0.5em 1em;
+}
 @media screen and (max-width: 768px) {
     .input {
         width: 90vw; 
