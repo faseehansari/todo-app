@@ -16,7 +16,8 @@ header{
 .heading{
     /* border: 1px solid red; */
     font-family: "Sedgwick Ave Display", cursive;
-    font-size: 45px;
+    /* font-size: 45px; */
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     letter-spacing: 3px;
     text-align: center;
 }
@@ -44,7 +45,20 @@ header p{
     text-align: center;
     padding: 0.5em 0;
 }
-.txt{
+.txt {
+    border: 2px solid rgba(128, 128, 128, 0.39);
+    padding: 1rem;
+    width: 70%;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.txt:focus {
+    border-color: #155DFB;
+    outline: none;
+}
+/* .txt{
     border: 2px solid rgba(128, 128, 128, 0.39);
     padding: 1.5em 1em;
     width: 70%;
@@ -55,7 +69,7 @@ header p{
 }
 .txt:focus{
     border: 2px solid #155DFB;
-}
+} */
 .btn{
     padding: 1em 0.8em;
     margin: 0 0.3em;
@@ -79,7 +93,20 @@ header p{
     align-items: center;
     padding: 0.5em 0;
 }
-.search{
+.search {
+    width: 49%;
+    padding: 1rem;
+    border: 2px solid rgba(128, 128, 128, 0.39);
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.search:focus {
+    border-color: #155DFB;
+    outline: none;
+}
+/* .search{
     width: 49%;
     padding: 1.5em 1em;
     height: 3em;
@@ -87,15 +114,17 @@ header p{
     background-color: transparent;
     border-radius: 10px;
     font-size: 15px;
-}
+} */
 .para{
     /* border: 1px solid green; */
     display: flex;
     justify-content: center;
     margin: 0.5em 0;
-    font-size: 20px;
+    font-size: 30px;
     color: #155DFB;
     font-weight: 500;
+    letter-spacing: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* ---------------------------------------------------------------- */
 .three{
@@ -103,7 +132,7 @@ header p{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3em 1em;
+    margin: 2em 1em;
 }
 .three ul{
     /* border: 2px solid blueviolet; */
@@ -156,7 +185,7 @@ ul{
     overflow-y: auto;
     padding: 0.5em 1em;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .input {
         width: 90vw; 
     }
@@ -215,5 +244,91 @@ ul{
     #para2 {
         width: 65%; 
         font-size: 14px;
+    }
+} */
+ /* Base layout */
+/* .container {
+    width: 100%;
+    max-width: 50rem;  
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.input,
+.txt,
+.search,
+.btn {
+    width: 100%;
+}
+
+.three ul {
+    width: 100%;
+} */
+
+/* Tablet */
+@media (max-width: 30rem) {
+
+    header {
+        flex-direction: column;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+    }
+
+    /* input section full width */
+    .input {
+        width: 95%;
+    }
+
+    .txt {
+        width: 100%;
+        padding: 1rem;
+        font-size: 0.9rem;
+        height: inherit;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 0.8rem;
+        display: block;
+    }
+
+    /* search full width */
+    .search {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+
+    /* list full width */
+    .three {
+        margin: 2rem 0.5rem;
+    }
+
+    .three ul {
+        width: 100%;
+    }
+
+    /* list item layout better on small screen */
+    .three ul li {
+        /* width: 90vw; */
+        /* margin: 1em 0.5em; */
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+    }
+
+    #para2 {
+        width: 80%;
+        margin: 0.3em 0.5em ;
+        font-size: 0.9rem;
+    }
+
+    .icons {
+        display: flex;
+        /* border: 1px solid; */
+        /* align-self: flex-end; */
     }
 }
